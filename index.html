@@ -245,12 +245,36 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
     <h2 class="section-title reveal">What I've Built</h2>
     <div class="proj-grid reveal">
 
+      <div class="proj-card tilt" style="border-color:rgba(124,106,247,0.4)">
+        <div class="proj-top">
+          <div class="proj-name">Real-Time ML Inference Platform</div>
+          <a href="https://github.com/Shashank-Varidelly/ml-inference-platform" class="proj-link" target="_blank">GitHub &#8599;</a>
+        </div>
+        <div class="proj-stat">p99 &lt; 10ms &middot; 500+ req/min &middot; A/B routing &middot; 20 tests</div>
+        <p class="proj-desc">Containerized ML inference platform serving real-time fraud detection via FastAPI with A/B routing between Logistic Regression and Random Forest. Includes Prometheus metrics, live Grafana dashboard, and 100% endpoint test coverage.</p>
+        <div class="proj-logo-strip-wrap">
+          <div class="proj-logo-strip" id="projStrip3"></div>
+        </div>
+      </div>
+
+      <div class="proj-card tilt" style="border-color:rgba(78,205,196,0.4)">
+        <div class="proj-top">
+          <div class="proj-name">Distributed Data Pipeline &amp; Analytics</div>
+          <a href="https://github.com/Shashank-Varidelly/data-pipeline" class="proj-link" target="_blank">GitHub &#8599;</a>
+        </div>
+        <div class="proj-stat">5,000+ events/min &middot; sub-second latency &middot; online ML</div>
+        <p class="proj-desc">End-to-end real-time streaming pipeline ingesting live crypto prices via Kafka into PostgreSQL. River HalfSpaceTrees online ML model detects anomalies per-coin with dynamic thresholding. Live Streamlit dashboard with OHLCV tables and anomaly alerts.</p>
+        <div class="proj-logo-strip-wrap">
+          <div class="proj-logo-strip" id="projStrip4"></div>
+        </div>
+      </div>
+
       <div class="proj-card tilt">
         <div class="proj-top">
           <div class="proj-name">QueryBridge-LLM</div>
-          <a href="https://github.com/shashank-varidelly" class="proj-link" target="_blank">GitHub ↗</a>
+          <a href="https://github.com/shashank-varidelly" class="proj-link" target="_blank">GitHub &#8599;</a>
         </div>
-        <div class="proj-stat">30% latency cut · 25,000+ records</div>
+        <div class="proj-stat">30% latency cut &middot; 25,000+ records</div>
         <p class="proj-desc">Full-stack agentic NL-to-SQL app using Gemini LLM backend and Streamlit frontend. Applied few-shot prompting, schema injection, and output constraints for 100% SQL correctness.</p>
         <div class="proj-logo-strip-wrap">
           <div class="proj-logo-strip" id="projStrip1"></div>
@@ -260,9 +284,9 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
       <div class="proj-card tilt">
         <div class="proj-top">
           <div class="proj-name">IntelliFraud</div>
-          <a href="https://github.com/shashank-varidelly" class="proj-link" target="_blank">GitHub ↗</a>
+          <a href="https://github.com/shashank-varidelly" class="proj-link" target="_blank">GitHub &#8599;</a>
         </div>
-        <div class="proj-stat">ROC-AUC 0.96 · 284K+ transactions</div>
+        <div class="proj-stat">ROC-AUC 0.96 &middot; 284K+ transactions</div>
         <p class="proj-desc">End-to-end ML fraud detection on 284K+ credit card transactions. Applied SMOTE oversampling, 12+ custom features, and tuned Random Forest and Logistic Regression classifiers. Improved recall by 27%.</p>
         <div class="proj-logo-strip-wrap">
           <div class="proj-logo-strip" id="projStrip2"></div>
@@ -320,6 +344,10 @@ const allLogos = [
   { name:'Streamlit', src:'https://cdn.simpleicons.org/streamlit/ffffff' },
   { name:'ServiceNow',src:'', svg:'<svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M11.976 0C5.364 0 0 5.4 0 12.024c0 6.624 5.4 11.976 12.024 11.976C18.648 24 24 18.6 24 11.976 23.976 5.352 18.6 0 11.976 0zm-.504 5.688c2.184 0 3.984 1.08 5.04 2.736L14.4 9.816c-.648-1.08-1.584-1.728-2.928-1.728-2.16 0-3.744 1.728-3.744 3.888s1.584 3.888 3.744 3.888c1.32 0 2.4-.648 2.928-1.728l2.112 1.392c-1.056 1.656-2.88 2.736-5.04 2.736-3.528 0-6.264-2.736-6.264-6.288s2.712-6.288 6.264-6.288z"/></svg>' },
   { name:'Docker',    src:'https://cdn.simpleicons.org/docker/ffffff' },
+  { name:'Kafka',     src:'https://cdn.simpleicons.org/apachekafka/ffffff' },
+  { name:'Postgres',  src:'https://cdn.simpleicons.org/postgresql/ffffff' },
+  { name:'FastAPI',   src:'https://cdn.simpleicons.org/fastapi/ffffff' },
+  { name:'Prometheus',src:'https://cdn.simpleicons.org/prometheus/ffffff' },
   { name:'Linux',     src:'https://cdn.simpleicons.org/linux/ffffff' },
 ];
 
@@ -358,9 +386,29 @@ function buildStrip(container, logos, size) {
   });
 }
 
+const proj3Logos = [
+  { name:'Python',     src:'https://cdn.simpleicons.org/python/ffffff' },
+  { name:'FastAPI',    src:'https://cdn.simpleicons.org/fastapi/ffffff' },
+  { name:'Docker',     src:'https://cdn.simpleicons.org/docker/ffffff' },
+  { name:'Prometheus', src:'https://cdn.simpleicons.org/prometheus/ffffff' },
+  { name:'Grafana',    src:'https://cdn.simpleicons.org/grafana/ffffff' },
+  { name:'Scikit',     src:'https://cdn.simpleicons.org/scikitlearn/ffffff' },
+  { name:'Streamlit',  src:'https://cdn.simpleicons.org/streamlit/ffffff' },
+];
+
+const proj4Logos = [
+  { name:'Python',  src:'https://cdn.simpleicons.org/python/ffffff' },
+  { name:'Kafka',   src:'https://cdn.simpleicons.org/apachekafka/ffffff' },
+  { name:'Postgres',src:'https://cdn.simpleicons.org/postgresql/ffffff' },
+  { name:'Docker',  src:'https://cdn.simpleicons.org/docker/ffffff' },
+  { name:'Streamlit',src:'https://cdn.simpleicons.org/streamlit/ffffff' },
+];
+
 buildStrip(document.getElementById('globalStrip'), allLogos, 'large');
 buildStrip(document.getElementById('projStrip1'), proj1Logos, 'small');
 buildStrip(document.getElementById('projStrip2'), proj2Logos, 'small');
+buildStrip(document.getElementById('projStrip3'), proj3Logos, 'small');
+buildStrip(document.getElementById('projStrip4'), proj4Logos, 'small');
 
 /* ── Copy email ── */
 function copyEmail() {
