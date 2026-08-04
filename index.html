@@ -296,9 +296,12 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
       <div class="proj-card tilt">
         <div class="proj-top">
           <div class="proj-name">Distributed Rate Limiter &amp; Load Balancer</div>
+          <a href="https://github.com/shashank-varidelly" class="proj-link" target="_blank">GitHub &#8599;</a>
         </div>
-        <div class="skill-tags" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.25rem">
-          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Redis</span><span class="tag">Docker</span><span class="tag">Nginx</span><span class="tag">pytest</span><span class="tag">Locust</span><span class="tag">httpx</span>
+        <div class="proj-stat">19 tests &middot; atomic Redis Lua scripts &middot; consistent hashing ring</div>
+        <p class="proj-desc">Distributed rate limiter (Token Bucket + Sliding Window Log) coordinating limits across stateless service instances via Redis, with a consistent hashing ring for low-disruption key routing. Includes a 3-instance Nginx-balanced Docker stack and load-testing tools.</p>
+        <div class="proj-logo-strip-wrap">
+          <div class="proj-logo-strip" id="projStrip5"></div>
         </div>
       </div>
 
@@ -378,6 +381,15 @@ const proj2Logos = [
   { name:'Linux',     src:'https://cdn.simpleicons.org/linux/ffffff' },
 ];
 
+const proj5Logos = [
+  { name:'Python',  src:'https://cdn.simpleicons.org/python/ffffff' },
+  { name:'FastAPI', src:'https://cdn.simpleicons.org/fastapi/ffffff' },
+  { name:'Redis',   src:'https://cdn.simpleicons.org/redis/ffffff' },
+  { name:'Docker',  src:'https://cdn.simpleicons.org/docker/ffffff' },
+  { name:'Nginx',   src:'https://cdn.simpleicons.org/nginx/ffffff' },
+  { name:'pytest',  src:'https://cdn.simpleicons.org/pytest/ffffff' },
+];
+
 function buildStrip(container, logos, size) {
   const doubled = [...logos, ...logos, ...logos, ...logos];
   const w = size === 'large' ? 36 : 22;
@@ -420,6 +432,7 @@ buildStrip(document.getElementById('projStrip1'), proj1Logos, 'small');
 buildStrip(document.getElementById('projStrip2'), proj2Logos, 'small');
 buildStrip(document.getElementById('projStrip3'), proj3Logos, 'small');
 buildStrip(document.getElementById('projStrip4'), proj4Logos, 'small');
+buildStrip(document.getElementById('projStrip5'), proj5Logos, 'small');
 
 /* ── Copy email ── */
 function copyEmail() {
